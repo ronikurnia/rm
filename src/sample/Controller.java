@@ -4,6 +4,7 @@ import dba.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
@@ -24,6 +25,7 @@ public class Controller implements Initializable {
     private boolean logout = false;
     private String message ="";
     private int hit2, hit3 =0;
+
     DaoTB tbData = new DaoTB(DbConnection.intradana());
     DaoMKBD mkbdData = new DaoMKBD(DbConnection.intradana());
     DaoTC tcData = new DaoTC(DbConnection.intradana());
@@ -33,7 +35,7 @@ public class Controller implements Initializable {
     @FXML    private PasswordField inpPassword;
     @FXML    private Button btnLogin;
     @FXML    private TabPane tabpane;
-    @FXML    private Label lblUser;
+  //  @FXML    private Label lblUser;
     @FXML    private Text  a1, a2, a3, a4, a5, a8, a9,a10, a11,
             b1, b2, b3, b4, b5, b6, b8, b9, b10,
             c1, c2,c3;
@@ -77,9 +79,9 @@ public class Controller implements Initializable {
                         System.out.println(pss);
                     }
                     if (un.equals(nama) & pss.equals(psw)) {
-                        masuk();
+              //          masuk();
                     } else {
-                        lblUser.setText("Unser name/password salah");
+ //                       lblUser.setText("Unser name/password salah");
                         inpNama.setText("");
                         inpPassword.setText("");
                     }
@@ -98,7 +100,7 @@ public class Controller implements Initializable {
             Stage st = (Stage) btnLogin.getScene().getWindow();
             st.close();
         }
-        masuk();
+     //   masuk();
 
     }
 
@@ -109,12 +111,16 @@ public class Controller implements Initializable {
 
     @FXML
     private void tes2() {
+
             masuk();
             posisiMKBD();
             posisikeuangan();
             operasi();
             cekrisk();
+
+
    //         Mail.sendMail(message);
+
     }
 
     private void posisikeuangan() {
@@ -154,7 +160,7 @@ public class Controller implements Initializable {
         inpPassword.setVisible(false);
         tabpane.setVisible(true);
         logout = true;
-        lblUser.setText("Welcome Bp/Ibu, " + nama);
+ //       lblUser.setText("Welcome Bp/Ibu, " + nama);
     }
 
 private void cekrisk(){
@@ -175,8 +181,6 @@ private void alert(Text t, String s){
         hit2 +=1;
         message += s;
     }
-
-
 }
 
 

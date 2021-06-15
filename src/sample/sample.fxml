@@ -4,24 +4,22 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.shape.SVGPath?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="600.0" minWidth="1200.0" prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="600.0" minWidth="1200.0" prefHeight="600.0" prefWidth="1200.0" style="-fx-border-color: blue;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
       <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="600.0" minWidth="1200.0" prefHeight="600.0" prefWidth="1200.0">
          <children>
-            <HBox minWidth="1200.0" prefHeight="50.0" prefWidth="1200.0" style="-fx-background-color: darkblue;">
+            <HBox minWidth="1200.0" prefHeight="50.0" prefWidth="1200.0" style="-fx-background-color: #012A4A;">
                <children>
                   <Label text="Risk Management" textFill="#fffcfc">
                      <font>
@@ -60,21 +58,13 @@
                   </Button>
                </children>
             </HBox>
-            <HBox layoutX="10.0" layoutY="10.0" minWidth="1200.0" prefHeight="30.0" prefWidth="1200.0" style="-fx-background-color: azure;">
-               <children>
-                  <Label fx:id="lblUser">
-                     <HBox.margin>
-                        <Insets left="830.0" top="10.0" />
-                     </HBox.margin>
-                  </Label>
-               </children></HBox>
             <Pane id="layarutama" minWidth="1200.0" prefHeight="496.0" prefWidth="1200.0" style="-fx-background-color: gainsboro;">
                <children>
-                  <TabPane fx:id="tabpane" layoutY="-3.0" minWidth="1200.0" prefHeight="499.0" prefWidth="1200.0" tabClosingPolicy="UNAVAILABLE">
+                  <TabPane fx:id="tabpane" layoutY="-3.0" minWidth="1200.0" prefHeight="550.0" prefWidth="1200.0" tabClosingPolicy="UNAVAILABLE">
                     <tabs>
                       <Tab text="Konsolidasi">
                            <content>
-                              <VBox fx:id="" prefHeight="200.0" prefWidth="100.0">
+                              <VBox fx:id="" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: C1D3FE;">
                                  <children>
                                     <HBox minHeight="30.0" prefHeight="30.0" prefWidth="200.0">
                                        <children>
@@ -389,7 +379,7 @@
                                                                         <Font size="14.0" />
                                                                      </font>
                                                                   </Text>
-                                                                  <Text fx:id="b8" fill="#e8dede" strokeType="OUTSIDE" strokeWidth="0.0" text="VD53-28">
+                                                                  <Text fx:id="b8" fill="#e8dede" strokeType="OUTSIDE" strokeWidth="0.0">
                                                                      <font>
                                                                         <Font size="14.0" />
                                                                      </font></Text>
@@ -633,33 +623,28 @@
                               </VBox>
                            </content>
                       </Tab>
-                      <Tab text="Risiko Kredit">
-                        <content>
-                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                      <Tab text="Alert">
+                           <content>
+                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: FLORALWHITE;">
                                  <children>
-                                    <HBox layoutX="34.0" layoutY="27.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="50.0">
+                                    <HBox prefHeight="100.0" prefWidth="1102.0">
                                        <children>
-                                          <SVGPath content="M576 240c0-23.63-12.95-44.04-32-55.12V32.01C544 23.26 537.02 0 512 0c-7.12 0-14.19 2.38-19.98 7.02l-85.03 68.03C364.28 109.19 310.66 128 256 128H64c-35.35 0-64 28.65-64 64v96c0 35.35 28.65 64 64 64h33.7c-1.39 10.48-2.18 21.14-2.18 32 0 39.77 9.26 77.35 25.56 110.94 5.19 10.69 16.52 17.06 28.4 17.06h74.28c26.05 0 41.69-29.84 25.9-50.56-16.4-21.52-26.15-48.36-26.15-77.44 0-11.11 1.62-21.79 4.41-32H256c54.66 0 108.28 18.81 150.98 52.95l85.03 68.03a32.023 32.023 0 0 0 19.98 7.02c24.92 0 32-22.78 32-32V295.13C563.05 284.04 576 263.63 576 240zm-96 141.42l-33.05-26.44C392.95 311.78 325.12 288 256 288v-96c69.12 0 136.95-23.78 190.95-66.98L480 98.58v282.84z" scaleX="0.1" scaleY="0.1" />
+                                          <Pane prefHeight="117.0" prefWidth="201.0">
+                                             <children>
+                                                <RadioButton layoutX="13.0" layoutY="62.0" mnemonicParsing="false" text="RadioButton" />
+                                                <RadioButton layoutX="13.0" layoutY="42.0" mnemonicParsing="false" style="-fx-selected-color: red;" text="RadioButton" />
+                                             </children>
+                                          </Pane>
                                        </children>
                                     </HBox>
-                                 </children></AnchorPane>
-                        </content>
+                                 </children>
+                              </VBox>
+                           </content>
                       </Tab>
                     </tabs>
                   </TabPane>
                </children>
             </Pane>
-            <HBox prefHeight="25.0" prefWidth="1000.0" style="-fx-background-color: darkblue;">
-               <children>
-                  <ImageView fitHeight="33.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../img/Logo_only.jpg" />
-                     </image>
-                     <HBox.margin>
-                        <Insets bottom="5.0" left="5.0" top="5.0" />
-                     </HBox.margin>
-                  </ImageView>
-               </children></HBox>
          </children>
       </VBox>
    </children>

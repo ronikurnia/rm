@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="retrofit-2.9.01">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../lib/retrofit-2.9.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../lib/javax.mail-1.6.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -2,8 +2,20 @@
   <library name="activation-1.1.1">
     <CLASSES>
       <root url="jar://$USER_HOME$/Downloads/activation-1.1.1.jar!/" />
+      <root url="file://$PROJECT_DIR$/../javafx-sdk-16" />
+      <root url="jar://$PROJECT_DIR$/../javafx-sdk-16/lib/javafx-swt.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../javafx-sdk-16/lib/javafx.base.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../javafx-sdk-16/lib/javafx.controls.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../javafx-sdk-16/lib/javafx.fxml.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../javafx-sdk-16/lib/javafx.graphics.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../javafx-sdk-16/lib/javafx.media.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../javafx-sdk-16/lib/javafx.swing.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../javafx-sdk-16/lib/javafx.web.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../lib/gson-2.8.7.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../javafx-sdk-16" />
+    </SOURCES>
   </library>
 </component>

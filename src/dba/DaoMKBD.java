@@ -27,13 +27,13 @@ public class DaoMKBD {
     }
 
     public String getPiutangT3_s() {
-        float n = Float.parseFloat(mkbd4.get("VD59.103"));
+        float n = Float.parseFloat(mkbd2.get("VD51.103"));
         String r = String.format("%,.0f", n / 1000000);
         return r;
     }
 
     public String getPiutangT4_s() {
-        float n = Float.parseFloat(mkbd4.get("VD59.104"));
+        float n = Float.parseFloat(mkbd2.get("VD51.104"));
         String r = String.format("%,.0f", n / 1000000);
         return r;
     }

@@ -10,11 +10,13 @@ public class DbConnection {
         Connection con = null;
 
         try {
+
+            DriverManager.registerDriver(new com.microsoft.sqlserver.jdbc.SQLServerDriver());
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             String url = "jdbc:sqlserver://172.24.16.92:1433;databaseName=RiskMonitoring;username=userrm;password=D4n4RM2021#";
             con = DriverManager.getConnection(url);
 
-        } catch (ClassNotFoundException | SQLException e) {
+        } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }
         return con;
