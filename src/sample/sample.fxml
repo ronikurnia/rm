@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="600.0" minWidth="1200.0" prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="600.0" minWidth="1200.0" prefHeight="600.0" prefWidth="1200.0">
+         <children>
+            <HBox minWidth="1200.0" prefHeight="50.0" prefWidth="1200.0" style="-fx-background-color: darkblue;">
+               <children>
+                  <Label text="Risk Management" textFill="#fffcfc">
+                     <font>
+                        <Font name="Arial" size="23.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="inpNama" promptText="User Name">
+                     <opaqueInsets>
+                        <Insets top="30.0" />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets left="560.0" top="10.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <PasswordField fx:id="inpPassword" promptText="Password">
+                     <opaqueInsets>
+                        <Insets top="20.0" />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </PasswordField>
+                  <Button fx:id="btnLogin" mnemonicParsing="false" onAction="#tes2" text="Log in" textAlignment="CENTER" textFill="#1623d9">
+                     <opaqueInsets>
+                        <Insets top="20.0" />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="10.0" minWidth="1200.0" prefHeight="30.0" prefWidth="1200.0" style="-fx-background-color: azure;">
+               <children>
+                  <Label fx:id="lblUser">
+                     <HBox.margin>
+                        <Insets left="830.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children></HBox>
+            <Pane id="layarutama" minWidth="1200.0" prefHeight="496.0" prefWidth="1200.0" style="-fx-background-color: gainsboro;">
+               <children>
+                  <TabPane fx:id="tabpane" layoutY="-3.0" minWidth="1200.0" prefHeight="499.0" prefWidth="1200.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="Konsolidasi">
+                           <content>
+                              <VBox fx:id="" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <HBox minHeight="30.0" prefHeight="30.0" prefWidth="200.0">
+                                       <children>
+                                          <Pane>
+                                             <children>
+                                                <HBox layoutY="-17.265625" style="-fx-background-color: ghostwhite; -fx-background-radius: 30;">
+                                                   <children>
+                                                      <VBox style="-fx-background-color: navy;">
+                                                         <children>
+                                                            <HBox>
+                                                               <children>
+                                                                  <Text fill="#e8dfdf" strokeType="OUTSIDE" strokeWidth="0.0" text="F I N A N C E">
+                                                                     <font>
+                                                                        <Font size="18.0" />
+                                                                     </font>
+                                                                     <HBox.margin>
+                                                                        <Insets right="20.0" />
+                                                                     </HBox.margin>
+                                                                  </Text>
+                                                               </children>
+                                                               <VBox.margin>
+                                                                  <Insets left="20.0" top="20.0" />
+                                                               </VBox.margin>
+                                                            </HBox>
+                                                            <HBox>
+                                                               <children>
+                                                                  <Text fill="#e0d8d8" strokeType="OUTSIDE" strokeWidth="0.0" text="Ekuitas">
+                                                                     <HBox.margin>
+                                                                        <Insets right="5.0" top="5.0" />
+                                                                     </HBox.margin>
+                                                                     <font>
+                                                                        <Font size="14.0" />
+                                                                     </font>
+                                                                  </Text>
+                                                                  <Text fx:id="a1" fill="#e8dede" strokeType="OUTSIDE" strokeWidth="0.0" text="1">
+                                                                     <HBox.margin>
+                                                                        <Insets top="5.0" />
+                                                                     </HBox.margin>
+                                                                     <font>
+                                                                        <Font size="14.0" />
+                                                                     </font>
+                                                                  </Text>
+                                                               </children>
+                                                               <VBox.margin>
+                                                                  <Insets left="20.0" />
+                                                               </VBox.margin>
+                                                            </HBox>
+                                                            <HBox layoutX="10.0" layoutY="32.0">
+                                                               <children>
+                                                                  <Text fill="#e8dede" strokeType="OUTSIDE" strokeWidth="0.0" text="Pendapatan">
+                                                                     <HBox.margin>
+                                                                        <Insets right="5.0" />
+                                                                     </HBox.margin>
+                                                                     <font>
+                                                                        <Font size="14.0" />
+                                                                     </font>
+                                                                  </Text>
+                                                                  <Text fx:id="a2" fill="#e8dede" strokeType="OUTSIDE" strokeWidth="0.0" text="100">
+                                                                     <font>
+                                                                        <Font size="14.0" />
+                                                                     </font></Text>
+                                                               </children>
+                                                               <VBox.margin>
+                                                                  <Insets left="20.0" />
+                                                               </VBox.margin>
+                                                            </HBox>
+                                                            <HBox layoutX="10.0" layoutY="53.0">
+                                                               <children>
+                                                                  <Text fill="#e8dede" strokeType="OUTSIDE" strokeWidth="0.0" text="Biaya">
+                                                                     <HBox.margin>
+                                                                        <Insets right="5.0" />
+                                                                     </HBox.margin>
+                                                                     <font>
+                                                                        <Font size="14.0" />
+                                                                     </font>
+                                                                  </Text>
+                                                                  <Text fx:id="a3" fill="#e8dede" strokeType="OUTSIDE" strokeWidth="0.0" text="120">
+                                                                     <font>
+                                                                        <Font size="14.0" />
+                                                                     </font></Text>
+                                                               </children>
+                                                               <VBox.margin>
+                                                                  <Insets left="20.0" />
+                                                               </VBox.margin>
+                                                            </HBox>
+                                                            <HBox layoutX="20.0" layoutY="71.0">
+                                                               <children>
+                                                                  <Text fill="#e8dfdf" strokeType="OUTSIDE" strokeWidth="0.0" text="Kas &amp; Bank">
+                                                                     <HBox.margin>
+                                                                        <Insets left="20.0" right="5.0" />
+                                                                     </HBox.margin>
+                                                                     <font>
+                                                                        <Font size="14.0" />
+                                                                     </font>
+                                                                  </Text>
+                                                                  <Text fx:id="a4" fill="#e8dede" strokeType="OUTSIDE" strokeWidth="0.0" text="140">
+                                                                     <font>
+                                                                        <Font size="14.0" />
+                                                                     </font></Text>
+                                                               </children>
+                                                            </HBox>
+                                                            <HBox layoutX="10.0" layoutY="108.0">
+                                                               <children>
+                                                                  <Text fill="#e8dede" strokeType="OUTSIDE" strokeWidth="0.0" text="Debitur Umum">
+                                                                     <HBox.margin>
+                                                                        <Insets left="20.0" right="5.0" />
+                                                                     </HBox.margin>
+                                                                     <font>
+                                                                        <Font size="14.0" />
+                                                                     </font>
+                                                                  </Text>
+                                                                  <Text fx:id="a5" fill="#e8dede" strokeType="OUTSIDE" strokeWidth="0.0" text="30">
+                                                                     <font>
+                                                                        <Font size="14.0" />
+                                                                     </font>
+                                                                     <HBox.margin>
+                                                                        <Insets right="15.0" />
+                                                                     </HBox.margin></Text>
+                                                               </children>
+                                                            </HBox>
+                                                            <HBox layoutX="10.0" layoutY="159.0">
+                                                               <children>
+                                                                  <Text fill="#e8dede" strokeType="OUTSIDE" strokeWidth="0.0" text="Posisi:">
+                                                                     <HBox.margin>
+                                                                        <Insets left="20.0" right="5.0" />
+                                                                     </HBox.margin>
+                                                                  </Text>
+                                                                  <Text fx:id="a10" fill="#e8dede" strokeType="OUTSIDE" strokeWidth="0.0" text="2021-05-27" />
+                                                               </children>
+                                                               <padding>
+                                                                  <Insets top="10.0" />
+                                                               </padding>
+                                                            </HBox>
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox prefHeight="200.0" prefWidth="100.0">
+                                                         <children>
+                                                            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Laba (Rugi)">
+                                                               <VBox.margin>
+                                                                  <Insets left="10.0" top="30.0" />
+                                                               </VBox.margin>
+                                                            </Text>
+                                                            <Text fx:id="a8" fill="#0ec921" strokeType="OUTSIDE" strokeWidth="0.0" text="14.000">
+                                                               <font>
+                                                                  <Font size="31.0" />
+                                                               </font>
+                                                               <VBox.margin>
+                                                                  <Insets left="10.0" right="30.0" />
+                                                               </VBox.margin>
+                                                            </Text>
+                                                            <HBox>
+                                                               <children>
+                                                                  <VBox>
+                                                                     <children>
+                                                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ROE">
+                                                                           <VBox.margin>
+                                                                              <Insets left="10.0" />
+                                                                           </VBox.margin>
+                                                                        </Text>
+                                                                        <Text fx:id="a9" fill="#0ec921" strokeType="OUTSIDE" strokeWidth="0.0" text="12%">
+                                                                           <font>
+                                                                              <Font size="31.0" />
+                                                                           </font>
+                                                                           <VBox.margin>
+                                                                              <Insets left="10.0" />
+                                                                           </VBox.margin>
+                                                                        </Text>
+                                                                     </children>
+                                                                     <HBox.margin>
+                                                                        <Insets right="10.0" />
+                                                                     </HBox.margin>
+                                                                  </VBox>
+                                                                  <VBox layoutX="10.0" layoutY="10.0">
+                                                                     <children>
+                                                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="BOPO" textOrigin="BOTTOM" />
+                                                                        <Text fx:id="a11" fill="#0ec921" strokeType="OUTSIDE" strokeWidth="0.0" text="90%">
+                                                                           <font>
+                                                                              <Font size="31.0" />
+                                                                           </font>
+                                                                           <VBox.margin>
+                                                                              <Insets right="10.0" />
+                                                                           </VBox.margin>
+                                                                        </Text>
+                                                                     </children>
+                                                                     <HBox.margin>
+                                                                        <Insets left="10.0" />
+                                                                     </HBox.margin>
+                                                                  </VBox>
+                                                               </children>
+                                                            </HBox>
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                             <opaqueInsets>
+                                                <Insets />
+                                             </opaqueInsets>
+                                             <HBox.margin>
+                                                <Insets left="30.0" right="30.0" />
+                                             </HBox.margin>
+                                          </Pane>
+                                          <Pane layoutX="40.0" layoutY="10.0">
+                                             <children>
+                                                <HBox layoutY="-17.265625" style="-fx-background-color: ghostwhite; -fx-background-radius: 30;">
+                                                   <children>
+                                                      <VBox style="-fx-background-color: royalblue;">
+                                                         <children>
+                                                            <HBox>
+                                                               <children>
+                                                                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="M K B D">
+                                                                     <font>
+                                                                        <Font size="18.0" />
+                                                                     </font>
+                                                                     <HBox.margin>
+                                                                        <Insets right="20.0" />
+                                                                     </HBox.margin>
+                                                                  </Text>
+                                                               </children>
+                                                               <VBox.margin>
+                                                                  <Insets left="20.0" top="20.0" />
+                                                               </VBox.margin>
+                                                            </HBox>
+                                                            <HBox>
+                                                               <children>
+                                                                  <Text fill="#e0d8d8" strokeType="OUTSIDE" strokeWidth="0.0" text="Piutang T+3">
+                                                                     <HBox.margin>
+                                                                        <Insets right="5.0" top="5.0" />
+                                                                     </HBox.margin>
+                                                                     <font>
+                                                                        <Font size="14.0" />
+                                                                     </font>
+                                                                  </Text>
+                                                                  <Text fx:id="b3" fill="#e8dede" strokeType="OUTSIDE" strokeWidth="0.0" text="103">
+                                                                     <HBox.margin>
+                                                                        <Insets top="5.0" />
+                                                                     </HBox.margin>
+                                                                     <font>
+                                                                        <Font size="14.0" />
+                                                                     </font>
+                                                                  </Text>
+                                                               </children>
+                                                               <VBox.margin>
+                                                                  <Insets left="20.0" />
+                                                               </VBox.margin>
+                                                            </HBox>
+                                                            <HBox layoutX="10.0" layoutY="32.0">
+                                                               <children>
+                                                                  <Text fill="#e8dede" strokeType="OUTSIDE" strokeWidth="0.0" text="Piutang &gt;T+4">
+                                                                     <HBox.margin>
+                                                                        <Insets right="5.0" />
+                                                                     </HBox.margin>
+                                                                     <font>
+                                                                        <Font size="14.0" />
+                                                                     </font>
+                                                                  </Text>
+                                                                  <Text fx:id="b4" fill="#e8dede" strokeType="OUTSIDE" strokeWidth="0.0" text="104">
+                                                                     <font>
+                                                                        <Font size="14.0" />
+                                                                     </font></Text>
+                                                               </children>
+                                                               <VBox.margin>
+                                                                  <Insets left="20.0" />
+                                                               </VBox.margin>
+                                                            </HBox>
+                                                            <HBox layoutX="10.0" layoutY="53.0">
+                                                               <children>
+                                                                  <Text fill="#e8dede" strokeType="OUTSIDE" strokeWidth="0.0" text="Gagal Serah">
+                                                                     <HBox.margin>
+                                                                        <Insets left="20.0" right="5.0" />
+                                                                     </HBox.margin>
+                                                                     <font>
+                                                                        <Font size="14.0" />
+                                                                     </font>
+                                                                  </Text>
+                                                                  <Text fx:id="b5" fill="#e8dede" strokeType="OUTSIDE" strokeWidth="0.0" text="44+39">
+                                                                     <HBox.margin>
+                                                                        <Insets left="20.0" />
+                                                                     </HBox.margin>
+                                                                     <font>
+                                                                        <Font size="14.0" />
+                                                                     </font>
+                                                                  </Text>
+                                                               </children>
+                                                               <VBox.margin>
+                                                                  <Insets right="20.0" />
+                                                               </VBox.margin>
+                                                            </HBox>
+                                                            <HBox layoutX="20.0" layoutY="71.0">
+                                                               <children>
+                                                                  <Text fill="#e8dfdf" strokeType="OUTSIDE" strokeWidth="0.0" text="Gagal Terima">
+                                                                     <HBox.margin>
+                                                                        <Insets left="20.0" right="5.0" />
+                                                                     </HBox.margin>
+                                                                     <font>
+                                                                        <Font size="14.0" />
+                                                                     </font>
+                                                                  </Text>
+                                                                  <Text fx:id="b6" fill="#e8dede" strokeType="OUTSIDE" strokeWidth="0.0" text="137+142">
+                                                                     <font>
+                                                                        <Font size="14.0" />
+                                                                     </font></Text>
+                                                               </children>
+                                                            </HBox>
+                                                            <HBox layoutX="10.0" layoutY="108.0">
+                                                               <children>
+                                                                  <Text fill="#e8dede" strokeType="OUTSIDE" strokeWidth="0.0" text="Konsentrasi Marjin">
+                                                                     <HBox.margin>
+                                                                        <Insets left="20.0" right="5.0" />
+                                                                     </HBox.margin>
+                                                                     <font>
+                                                                        <Font size="14.0" />
+                                                                     </font>
+                                                                  </Text>
+                                                                  <Text fx:id="b8" fill="#e8dede" strokeType="OUTSIDE" strokeWidth="0.0" text="VD53-28">
+                                                                     <font>
+                                                                        <Font size="14.0" />
+                                                                     </font></Text>
+                                                               </children>
+                                                            </HBox>
+                                                            <HBox layoutX="30.0" layoutY="159.0">
+                                                               <children>
+                                                                  <Text fill="#e8dede" strokeType="OUTSIDE" strokeWidth="0.0" text="Posisi:">
+                                                                     <HBox.margin>
+                                                                        <Insets right="5.0" />
+                                                                     </HBox.margin>
+                                                                  </Text>
+                                                                  <Text fx:id="b10" fill="#e8dede" strokeType="OUTSIDE" strokeWidth="0.0" text="2021-05-28">
+                                                                     <HBox.margin>
+                                                                        <Insets right="20.0" />
+                                                                     </HBox.margin>
+                                                                  </Text>
+                                                               </children>
+                                                               <padding>
+                                                                  <Insets left="20.0" top="10.0" />
+                                                               </padding>
+                                                            </HBox>
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox prefHeight="200.0" prefWidth="100.0">
+                                                         <children>
+                                                            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nilai MKBD">
+                                                               <VBox.margin>
+                                                                  <Insets left="10.0" top="30.0" />
+                                                               </VBox.margin>
+                                                            </Text>
+                                                            <Text fx:id="b1" fill="#0ec921" strokeType="OUTSIDE" strokeWidth="0.0" text="14.000">
+                                                               <font>
+                                                                  <Font size="31.0" />
+                                                               </font>
+                                                               <VBox.margin>
+                                                                  <Insets left="10.0" right="30.0" />
+                                                               </VBox.margin>
+                                                            </Text>
+                                                            <Text layoutX="20.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Buffer MKBD">
+                                                               <VBox.margin>
+                                                                  <Insets left="15.0" top="15.0" />
+                                                               </VBox.margin>
+                                                            </Text>
+                                                            <Text fx:id="b2" fill="#0ec921" layoutX="20.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="180.000">
+                                                               <font>
+                                                                  <Font size="31.0" />
+                                                               </font>
+                                                               <VBox.margin>
+                                                                  <Insets left="15.0" right="20.0" />
+                                                               </VBox.margin>
+                                                            </Text>
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                             <opaqueInsets>
+                                                <Insets />
+                                             </opaqueInsets>
+                                             <padding>
+                                                <Insets right="30.0" />
+                                             </padding>
+                                          </Pane>
+                                          <Pane layoutX="438.0" layoutY="10.0">
+                                             <children>
+                                                <HBox layoutY="-17.265625" style="-fx-background-color: ghostwhite; -fx-background-radius: 30;">
+                                                   <children>
+                                                      <VBox style="-fx-background-color: MEDIUMSLATEBLUE;">
+                                                         <children>
+                                                            <HBox>
+                                                               <children>
+                                                                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="B I S N I S">
+                                                                     <font>
+                                                                        <Font size="18.0" />
+                                                                     </font>
+                                                                     <HBox.margin>
+                                                                        <Insets right="10.0" />
+                                                                     </HBox.margin>
+                                                                  </Text>
+                                                               </children>
+                                                               <VBox.margin>
+                                                                  <Insets left="20.0" top="20.0" />
+                                                               </VBox.margin>
+                                                            </HBox>
+                                                            <HBox>
+                                                               <children>
+                                                                  <Text fill="#e0d8d8" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Aset">
+                                                                     <HBox.margin>
+                                                                        <Insets right="5.0" top="5.0" />
+                                                                     </HBox.margin>
+                                                                  </Text>
+                                                                  <Text fx:id="a111" fill="#e8dede" strokeType="OUTSIDE" strokeWidth="0.0" text="1">
+                                                                     <HBox.margin>
+                                                                        <Insets top="5.0" />
+                                                                     </HBox.margin>
+                                                                  </Text>
+                                                               </children>
+                                                               <VBox.margin>
+                                                                  <Insets left="20.0" />
+                                                               </VBox.margin>
+                                                            </HBox>
+                                                            <HBox layoutX="10.0" layoutY="32.0">
+                                                               <children>
+                                                                  <Text fill="#e8dede" strokeType="OUTSIDE" strokeWidth="0.0" text="Kas &amp; Setara">
+                                                                     <HBox.margin>
+                                                                        <Insets right="5.0" />
+                                                                     </HBox.margin>
+                                                                  </Text>
+                                                                  <Text fx:id="a211" fill="#e8dede" strokeType="OUTSIDE" strokeWidth="0.0" text="100" />
+                                                               </children>
+                                                               <VBox.margin>
+                                                                  <Insets left="20.0" />
+                                                               </VBox.margin>
+                                                            </HBox>
+                                                            <HBox layoutX="10.0" layoutY="53.0">
+                                                               <children>
+                                                                  <Text fill="#e8dede" strokeType="OUTSIDE" strokeWidth="0.0" text="Piutang ">
+                                                                     <HBox.margin>
+                                                                        <Insets left="20.0" right="5.0" />
+                                                                     </HBox.margin>
+                                                                  </Text>
+                                                                  <Text fx:id="a311" fill="#e8dede" strokeType="OUTSIDE" strokeWidth="0.0" text="120">
+                                                                     <HBox.margin>
+                                                                        <Insets left="20.0" />
+                                                                     </HBox.margin>
+                                                                  </Text>
+                                                               </children>
+                                                               <VBox.margin>
+                                                                  <Insets right="20.0" />
+                                                               </VBox.margin>
+                                                            </HBox>
+                                                            <HBox layoutX="20.0" layoutY="71.0">
+                                                               <children>
+                                                                  <Text fill="#e8dfdf" strokeType="OUTSIDE" strokeWidth="0.0" text="Portofolio">
+                                                                     <HBox.margin>
+                                                                        <Insets left="20.0" right="5.0" />
+                                                                     </HBox.margin>
+                                                                  </Text>
+                                                                  <Text fx:id="a411" fill="#e8dede" strokeType="OUTSIDE" strokeWidth="0.0" text="140" />
+                                                               </children>
+                                                            </HBox>
+                                                            <HBox layoutX="10.0" layoutY="107.0">
+                                                               <children>
+                                                                  <Text fill="#e8dede" strokeType="OUTSIDE" strokeWidth="0.0" text="Debitur Umum">
+                                                                     <HBox.margin>
+                                                                        <Insets left="20.0" right="5.0" />
+                                                                     </HBox.margin>
+                                                                  </Text>
+                                                                  <Text fx:id="a511" fill="#e8dede" strokeType="OUTSIDE" strokeWidth="0.0" text="263" />
+                                                               </children>
+                                                            </HBox>
+                                                            <HBox layoutX="10.0" layoutY="108.0">
+                                                               <children>
+                                                                  <Text fill="#e8dede" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Kewajiban">
+                                                                     <HBox.margin>
+                                                                        <Insets left="20.0" right="5.0" />
+                                                                     </HBox.margin>
+                                                                  </Text>
+                                                                  <Text fx:id="a611" fill="#e8dede" strokeType="OUTSIDE" strokeWidth="0.0" text="30" />
+                                                               </children>
+                                                            </HBox>
+                                                            <HBox layoutX="10.0" layoutY="125.0">
+                                                               <children>
+                                                                  <Text fill="#e8dede" strokeType="OUTSIDE" strokeWidth="0.0" text="Kreditur Umum">
+                                                                     <HBox.margin>
+                                                                        <Insets right="5.0" />
+                                                                     </HBox.margin>
+                                                                  </Text>
+                                                                  <Text fx:id="a711" fill="#e8dede" strokeType="OUTSIDE" strokeWidth="0.0" text="372">
+                                                                     <HBox.margin>
+                                                                        <Insets right="20.0" />
+                                                                     </HBox.margin>
+                                                                  </Text>
+                                                               </children>
+                                                               <VBox.margin>
+                                                                  <Insets left="20.0" />
+                                                               </VBox.margin>
+                                                            </HBox>
+                                                            <HBox layoutX="30.0" layoutY="159.0">
+                                                               <children>
+                                                                  <Text fill="#e8dede" strokeType="OUTSIDE" strokeWidth="0.0" text="Posisi:">
+                                                                     <HBox.margin>
+                                                                        <Insets right="5.0" />
+                                                                     </HBox.margin>
+                                                                  </Text>
+                                                                  <Text fx:id="c3" fill="#e8dede" strokeType="OUTSIDE" strokeWidth="0.0" text="372">
+                                                                     <HBox.margin>
+                                                                        <Insets right="20.0" />
+                                                                     </HBox.margin>
+                                                                  </Text>
+                                                               </children>
+                                                               <VBox.margin>
+                                                                  <Insets left="20.0" top="10.0" />
+                                                               </VBox.margin>
+                                                            </HBox>
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox prefHeight="200.0" prefWidth="100.0">
+                                                         <children>
+                                                            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Gain(Loss) Trading ECM ">
+                                                               <VBox.margin>
+                                                                  <Insets left="10.0" top="30.0" />
+                                                               </VBox.margin>
+                                                            </Text>
+                                                            <Text fx:id="c1" fill="#0ec921" strokeType="OUTSIDE" strokeWidth="0.0" text="14.000">
+                                                               <font>
+                                                                  <Font size="31.0" />
+                                                               </font>
+                                                               <VBox.margin>
+                                                                  <Insets left="10.0" right="30.0" />
+                                                               </VBox.margin>
+                                                            </Text>
+                                                            <Text layoutX="20.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Fee ECM">
+                                                               <VBox.margin>
+                                                                  <Insets left="20.0" top="15.0" />
+                                                               </VBox.margin>
+                                                            </Text>
+                                                            <Text fx:id="c2" fill="#0ec921" layoutX="20.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="180.000">
+                                                               <font>
+                                                                  <Font size="31.0" />
+                                                               </font>
+                                                               <VBox.margin>
+                                                                  <Insets left="15.0" right="20.0" />
+                                                               </VBox.margin>
+                                                            </Text>
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                             <opaqueInsets>
+                                                <Insets />
+                                             </opaqueInsets>
+                                          </Pane>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="50.0" />
+                                       </VBox.margin></HBox>
+                                 </children>
+                              </VBox>
+                           </content>
+                      </Tab>
+                      <Tab text="Risiko Kredit">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <HBox layoutX="34.0" layoutY="27.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="50.0">
+                                       <children>
+                                          <SVGPath content="M576 240c0-23.63-12.95-44.04-32-55.12V32.01C544 23.26 537.02 0 512 0c-7.12 0-14.19 2.38-19.98 7.02l-85.03 68.03C364.28 109.19 310.66 128 256 128H64c-35.35 0-64 28.65-64 64v96c0 35.35 28.65 64 64 64h33.7c-1.39 10.48-2.18 21.14-2.18 32 0 39.77 9.26 77.35 25.56 110.94 5.19 10.69 16.52 17.06 28.4 17.06h74.28c26.05 0 41.69-29.84 25.9-50.56-16.4-21.52-26.15-48.36-26.15-77.44 0-11.11 1.62-21.79 4.41-32H256c54.66 0 108.28 18.81 150.98 52.95l85.03 68.03a32.023 32.023 0 0 0 19.98 7.02c24.92 0 32-22.78 32-32V295.13C563.05 284.04 576 263.63 576 240zm-96 141.42l-33.05-26.44C392.95 311.78 325.12 288 256 288v-96c69.12 0 136.95-23.78 190.95-66.98L480 98.58v282.84z" scaleX="0.1" scaleY="0.1" />
+                                       </children>
+                                    </HBox>
+                                 </children></AnchorPane>
+                        </content>
+                      </Tab>
+                    </tabs>
+                  </TabPane>
+               </children>
+            </Pane>
+            <HBox prefHeight="25.0" prefWidth="1000.0" style="-fx-background-color: darkblue;">
+               <children>
+                  <ImageView fitHeight="33.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/Logo_only.jpg" />
+                     </image>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" top="5.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children></HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
