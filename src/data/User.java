@@ -4,17 +4,18 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class User {
-    @SerializedName("iduser")
-    @Expose
     private String iduser;
-    @SerializedName("namo")
-    @Expose
     private String namo;
-    @SerializedName("psw")
-    @Expose
+
+    public String getPsw() {
+        return psw;
+    }
+
+    public void setPsw(String psw) {
+        this.psw = psw;
+    }
+
     private String psw;
-    @SerializedName("peran")
-    @Expose
     private String peran;
 
     public String getIduser() {
@@ -33,13 +34,6 @@ public class User {
         this.namo = namo;
     }
 
-    public String getPsw() {
-        return psw;
-    }
-
-    public void setPsw(String psw) {
-        this.psw = psw;
-    }
 
     public String getPeran() {
         return peran;
