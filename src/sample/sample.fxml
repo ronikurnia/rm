@@ -16,11 +16,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="600.0" minWidth="1200.0" prefHeight="600.0" prefWidth="1200.0" style="-fx-border-color: blue;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="600.0" minWidth="1200.0" prefHeight="600.0" prefWidth="1200.0" style="-fx-border-color: blue;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
       <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="600.0" minWidth="1200.0" prefHeight="600.0" prefWidth="1200.0">
          <children>
-            <HBox minWidth="1200.0" prefHeight="50.0" prefWidth="1200.0" style="-fx-background-color: #012A4A;">
+            <HBox fx:id="bar" minWidth="1200.0" prefHeight="50.0" prefWidth="1200.0" style="-fx-background-color: #012A4A;">
                <children>
                   <Label text="Risk Management" textFill="#fffcfc">
                      <font>
@@ -67,7 +67,7 @@
                   </Button>
                </children>
             </HBox>
-            <Pane id="layarutama" minWidth="1200.0" prefHeight="496.0" prefWidth="1200.0" style="-fx-background-color: gainsboro;">
+            <Pane id="layarutama" minWidth="1200.0" prefHeight="600.0" prefWidth="1200.0" style="-fx-background-color: gainsboro;">
                <children>
                   <TabPane fx:id="tabpane" layoutY="-3.0" minWidth="1200.0" prefHeight="550.0" prefWidth="1200.0" tabClosingPolicy="UNAVAILABLE">
                     <tabs>
@@ -632,11 +632,11 @@
                               </VBox>
                            </content>
                       </Tab>
-                      <Tab text="Alert">
+                      <Tab text="Early Warning Syst.">
                            <content>
                               <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: SILVER;">
                                  <children>
-                                    <HBox prefHeight="100.0" prefWidth="1102.0">
+                                    <HBox fx:id="btnSend" prefHeight="100.0" prefWidth="1102.0">
                                        <children>
                                           <Pane prefHeight="117.0" prefWidth="201.0">
                                              <children>
@@ -644,7 +644,10 @@
                                                 <RadioButton fx:id="rb2" layoutX="14.0" layoutY="59.0" mnemonicParsing="false" text="Notifikasi EOD" />
                                              </children>
                                           </Pane>
-                                          <Pane layoutX="10.0" layoutY="10.0" prefHeight="117.0" prefWidth="201.0" />
+                                          <Pane layoutX="10.0" layoutY="10.0" prefHeight="117.0" prefWidth="201.0">
+                                             <children>
+                                                <Button layoutX="49.0" layoutY="25.0" mnemonicParsing="false" onAction="#tradingmonitor" text="Send" />
+                                             </children></Pane>
                                        </children>
                                     </HBox>
                                     <HBox layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="1102.0">

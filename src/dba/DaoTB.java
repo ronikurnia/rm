@@ -27,6 +27,10 @@ public String getBopo_s(){
     float bopo = (getBiaya()*-100) / getPendapatan();
     return (String.format("%.0f%%",bopo));
 }
+    public float getBopo(){
+        float bopo = (getBiaya()*-100) / getPendapatan();
+        return bopo;
+    }
     public String getRoe_s() {
         float percent = (getLaba()*100) / getEkuitas();
         float p = percent * 365/getJumlahhari();

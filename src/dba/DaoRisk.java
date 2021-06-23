@@ -26,7 +26,8 @@ public class DaoRisk {
     HashMap<String, Float> risk2 = new HashMap<>();
     HashMap<String, Float> risk3 = new HashMap<>();
 
-    public float getMKBDbuffer(){return risk2.get("4.3.1");}
+    public float getMKBDbuffer2(){return risk2.get("4.3.1");}
+    public float getMKBDbuffer3(){return risk3.get("4.3.1");}
     public float getRoe2() { return risk2.get("8.4.3.5");}
     public float getRoe3() { return risk3.get("8.4.3.5");}
 

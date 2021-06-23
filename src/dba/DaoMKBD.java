@@ -26,10 +26,20 @@ public class DaoMKBD {
         return tanggal;
     }
 
+    public float getPiutangT3() {
+        float n = Float.parseFloat(mkbd2.get("VD51.103"));
+        return n;
+    }
+
+
     public String getPiutangT3_s() {
         float n = Float.parseFloat(mkbd2.get("VD51.103"));
         String r = String.format("%,.0f", n / 1000000);
         return r;
+    }
+    public float getPiutangT4() {
+        float n = Float.parseFloat(mkbd2.get("VD51.104"));
+        return n;
     }
 
     public String getPiutangT4_s() {
@@ -37,12 +47,23 @@ public class DaoMKBD {
         String r = String.format("%,.0f", n / 1000000);
         return r;
     }
+    public float getGagalSerah() {
+        float n = Float.parseFloat(mkbd2.get("VD51.44"));
+        float m = Float.parseFloat(mkbd2.get("VD51.39"));
+        return n+m;
+    }
     public String getGagalSerah_s() {
         float n = Float.parseFloat(mkbd2.get("VD51.44"));
         float m = Float.parseFloat(mkbd2.get("VD51.39"));
         float nm = n + m;
         String r = String.format("%,.0f", nm/ 1000000);
         return r;
+    }
+
+    public float getGagalTerima() {
+        float n = Float.parseFloat(mkbd2.get("VD52.137"));
+        float m = Float.parseFloat(mkbd2.get("VD52.142"));
+        return n+m;
     }
     public String getGagalTerima_s() {
         float n = Float.parseFloat(mkbd2.get("VD52.137"));

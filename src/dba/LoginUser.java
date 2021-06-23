@@ -1,7 +1,6 @@
 package dba;
 import com.google.gson.Gson;
 import data.User;
-import net.sf.json.JSONObject;
 
 import java.io.IOException;
 import java.lang.reflect.Type;
