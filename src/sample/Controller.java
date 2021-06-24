@@ -58,7 +58,7 @@ public class Controller implements Initializable {
     @FXML    private Label lblUser;
     @FXML    private Text  a1, a2, a3, a4, a5, a8, a9,a10, a11,
             b1, b2, b3, b4, b5, b6, b8, b9, b10,
-            c1, c2,c3;
+            c1, c2,c3, c4, c5, c6, c7, c8;
 
     @FXML    private RadioButton rb1, rb2;
 
@@ -119,8 +119,9 @@ public class Controller implements Initializable {
             masuk();
             posisiMKBD();
             posisikeuangan();
-            operasi();
+            ecm();
             cekrisk();
+            message="";
         ses.scheduleAtFixedRate(eodmonRunable, 1, 30, TimeUnit.MINUTES);
       //  ses.scheduleAtFixedRate(task1, 1, 2, TimeUnit.MINUTES);
 
@@ -162,17 +163,14 @@ public class Controller implements Initializable {
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
-        posisikeuangan();
+            posisikeuangan();
             posisiMKBD();
-            operasi();
+            ecm();
             cekrisk();
          //  sendnotif();
         System.out.println("Task2 ok " + (LocalTime.now().toString()));
-      //  System.out.println(message);
-     //   Mail.sendMail("Tes");
-        System.out.println(pa.getRlECM()+" : "+pa.getMkbdBuffer());
+        if(!pa.getTglDaoMKBD().equals(mkbdData.getTanggal())){Mail.sendMail(message);};
         setPosisiAkhir();
-        System.out.println("MKBDBUffer: "+mkbdData.getBufferMKBD()+" : TCGain: "+tcData.getGain());
         message="";
     }
 
@@ -185,7 +183,6 @@ public class Controller implements Initializable {
       //  Mail.sendMail("Tes");
     }
     private void posisikeuangan(){
-
 
         a1.setText(tbData.getEkuitasS());
         a2.setText(tbData.getPendapatan_s());
@@ -211,12 +208,15 @@ public class Controller implements Initializable {
     }
 
 
-    private void operasi(){
+    private void ecm(){
 
         /*pasang di tab xml*/
         c1.setText(tcData.getGain_s());
         c2.setText(tcData.getFee_s());
         c3.setText(tcData.getTanggal().toString());
+        c4.setText(tcData.getGainmin1_s());
+        c5.setText(tcData.getLossmin1_s());
+        c6.setText(tcData.getPnlmin1_s());
     }
 
     private void setPosisiAkhir(){
@@ -231,7 +231,7 @@ public class Controller implements Initializable {
         pa.setT4(mkbdData.getPiutangT4());
         pa.setGagalSerah(mkbdData.getGagalSerah());
         pa.setGagalTerima(mkbdData.getGagalTerima());
-
+        pa.setPnlEcmMin1(tcData.getPnlmin1());
     }
     private void masuk() {
         String nama = inpNama.getText();
@@ -247,26 +247,25 @@ public class Controller implements Initializable {
 
 private void cekrisk(){
     if(tbData.getRoe() < risk.getRoe2() && tbData.getRoe()>= risk.getRoe3()) { alert(a9); }
-    else if (tbData.getRoe() < risk.getRoe3()){warning(a9, "ROE Risk Indicator: "+pa.getRoe()+"=> "+tbData.getRoe(),pa.getRoe(), tbData.getRoe());}
+    else if (tbData.getRoe() < risk.getRoe3()){warning(a9, "\nROE Risk Indicator: "+pa.getRoe()+"=> "+tbData.getRoe());}
 
     if(mkbdData.getBufferMKBD() < risk.getMKBDbuffer2()  && mkbdData.getBufferMKBD() >= risk.getMKBDbuffer3())
     { alert(a9); } else if(mkbdData.getBufferMKBD() <  risk.getMKBDbuffer3())
-    { warning(b2,"MKBD Buffer Indicator: "+pa.getMkbdBuffer()+" => "+mkbdData.getBufferMKBD()+"\n",pa.getMkbdBuffer(), mkbdData.getBufferMKBD()); }
+    { warning(b2,"MKBD Buffer Indicator: "+pa.getMkbdBuffer()+" => "+mkbdData.getBufferMKBD()); }
 
-    if(mkbdData.getGagalSerah()>0){warning(b5,"Gagal serah"+mkbdData.getGagalSerah()+"=> "+pa.getGagalSerah(),pa.getGagalSerah(),mkbdData.getGagalSerah());}
-    if(mkbdData.getGagalTerima()>0){warning(b5,"Gagal serah"+mkbdData.getGagalTerima()+"=> "+pa.getGagalTerima(),pa.getGagalTerima(),mkbdData.getGagalTerima());}
+    if(mkbdData.getGagalSerah()>0){warning(b5,"Gagal serah"+pa.getGagalSerah()+"=> "+mkbdData.getGagalSerah());}
+    if(mkbdData.getGagalTerima()>0){warning(b6,"Gagal serah"+pa.getGagalTerima()+"=> "+mkbdData.getGagalTerima());}
+    if(tcData.getPnlmin1()<0){warning(c6,"PNL ECM T-1:"+pa.getPnlEcmMin1()+"=> "+tcData.getPnlmin1());}
     }
 
 private void alert(Text t){
         t.setFill(Color.ORANGERED);
         }
 
-private void warning(Text t, String s, float pa, float cp){
+private void warning(Text t, String s){
         t.setFill(Color.RED);
-        if(pa!=cp){ message += s;}
-        System.out.println(pa+" ; "+cp);
+         message += s;
     }
-
 }
 
 

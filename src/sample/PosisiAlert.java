@@ -4,20 +4,26 @@ package sample;
 import java.util.Date;
 
 public class PosisiAlert {
-    Date tglDaoTC;
-    Date tglDaoMKBD;
-    Date tglDaoTB;
-    float roe;
-    float rlECM;
-    float mkbdBuffer;
-    float bopo;
-    float T3;
-    float t4;
-    float gagalSerah;
-    float gagalTerima;
+    Date tglDaoTC = new Date(2021,06,21) ;;
+    Date tglDaoMKBD= new Date(2021,06,21) ;
+    Date tglDaoTB = new Date(2021,06,21) ;;
+    float roe=0;
+    float rlECM=0;
+    float mkbdBuffer=0;
+    float bopo=0;
+    float T3=0;
+    float t4=0;
+    float gagalSerah=0;
+    float gagalTerima=0;
+    float pnlEcmMin1=0;
 
+    public float getPnlEcmMin1() {
+        return pnlEcmMin1;
+    }
 
-
+    public void setPnlEcmMin1(float pnlEcmMin1) {
+        this.pnlEcmMin1 = pnlEcmMin1;
+    }
     public float getRoe() {
         return roe;
     }
@@ -25,8 +31,6 @@ public class PosisiAlert {
     public void setRoe(float roe) {
         this.roe = roe;
     }
-
-
 
     public Date getTglDaoTC() {
         return tglDaoTC;

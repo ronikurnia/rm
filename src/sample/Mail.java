@@ -19,7 +19,7 @@ public class Mail {
             MimeMessage message = new MimeMessage(session);
             message.setFrom(new InternetAddress("roni@danareksa.com"));
             message.setRecipients(Message.RecipientType.TO, new InternetAddress[]{new InternetAddress(to)});
-            message.setSubject("Risk Notifroni");
+            message.setSubject("Risk Notification");
             message.setText(msg);
             Transport.send(message);
 
